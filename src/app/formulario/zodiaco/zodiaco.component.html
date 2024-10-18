@@ -1,0 +1,106 @@
+<form class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg" [formGroup]="formGroup" (ngSubmit)="OnSubmit()">  
+  <div class="grid grid-cols-1 gap-6">
+    <div class="mb-5">
+      <label for="nombre" class="block text-lg font-semibold text-gray-800">Nombre</label>
+      <input 
+        type="text" 
+        id="nombre" 
+        class="bg-gray-100 border border-gray-300 text-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" 
+        formControlName="nombre" 
+        placeholder="Ingresa tu nombre"/>
+    </div>
+
+    <div class="mb-5">
+      <label for="apaterno" class="block text-lg font-semibold text-gray-800">Apellido Paterno</label>
+      <input 
+        type="text" 
+        id="apaterno" 
+        class="bg-gray-100 border border-gray-300 text-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" 
+        formControlName="apaterno" 
+        placeholder="Ingresa tu apellido paterno"/>
+    </div>
+
+    <div class="mb-5">
+      <label for="amaterno" class="block text-lg font-semibold text-gray-800">Apellido Materno</label>
+      <input 
+        type="text" 
+        id="amaterno" 
+        class="bg-gray-100 border border-gray-300 text-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" 
+        formControlName="amaterno" 
+        placeholder="Ingresa tu apellido materno"/>
+    </div>
+
+    <div class="mb-5">
+      <label for="fecha-nacimiento" class="block text-lg font-semibold text-gray-800">Fecha de Nacimiento</label>
+      <div class="grid grid-cols-3 gap-4">
+        <div>
+          <label for="" class="text-sm font-medium text-gray-600">Día</label>
+          <input 
+            type="number" 
+            id="dia" 
+            class="bg-gray-100 border border-gray-300 text-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" 
+            formControlName="dia" />
+        </div>
+        <div>
+          <label for="" class="text-sm font-medium text-gray-600">Mes</label>
+          <input 
+            type="number" 
+            id="mes" 
+            class="bg-gray-100 border border-gray-300 text-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" 
+            formControlName="mes" />
+        </div>
+        <div>
+          <label for="" class="text-sm font-medium text-gray-600">Año</label>
+          <input 
+            type="number" 
+            id="anoN" 
+            class="bg-gray-100 border border-gray-300 text-gray-800 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" 
+            formControlName="anoN" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <span class="block text-lg font-semibold text-gray-800">Género</span>
+      <div class="flex items-center space-x-6 mt-3">
+        <div>
+          <input 
+            type="radio" 
+            id="mujer" 
+            value="mujer" 
+            formControlName="genero" 
+            class="focus:ring-blue-500 focus:border-blue-500 text-blue-600"/>
+          <label for="mujer" class="text-md font-medium text-gray-700 ml-2">Femenino</label>
+        </div>
+        <div>
+          <input 
+            type="radio" 
+            id="hombre" 
+            value="hombre" 
+            formControlName="genero" 
+            class="focus:ring-blue-500 focus:border-blue-500 text-blue-600"/>
+          <label for="hombre" class="text-md font-medium text-gray-700 ml-2">Masculino</label>
+        </div>
+      </div>
+    </div>
+
+    <button 
+      type="submit" 
+      class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-200 ease-in-out">
+      Enviar
+    </button>
+
+    <div class="mt-6">
+      <h2 class="text-xl font-semibold text-gray-800">Tu Información:</h2>
+      <p class="text-md text-gray-700 mt-2">Nombre completo: {{nombre}} {{apaterno}} {{amaterno}}</p>
+      <p class="text-md text-gray-700">Fecha de nacimiento: {{dia}}/{{mes}}/{{anoN}}</p>
+      <p class="text-md text-gray-700">Tu edad es: {{edad}}</p>
+      <p class="text-md text-gray-700">Género: {{genero}}</p>
+      <p class="text-md text-gray-700">Horóscopo Chino: {{vAnimal}}</p>
+      <img src="{{link}}" alt="" width="300" height="200">
+
+    </div>
+  </div>
+</form>
+
+ 
